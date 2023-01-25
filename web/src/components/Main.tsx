@@ -23,9 +23,9 @@ export function Main(){
                     </header>
                     <p className="mb-12"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div className="flex">
-                        <img src={star} alt="" />
+                        <img src={star} className="mr-1" alt="" />
                         <p className="mr-3">100</p>
-                        <img src={branch} alt="" />
+                        <img src={branch} className="mr-1" alt="" />
                         <p>100</p>
                         <div className="h-2 w-2 bg-yellow-300 self-center ml-auto mr-2 rounded-full border-2 "></div>
                         <p>Javascript</p>
