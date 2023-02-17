@@ -18,7 +18,7 @@ export function Main() {
   const [forks2, setForks2] = useState(0);
   const [language2, setLanguage2] = useState('');
 
-  const reposUrl = 'https://api.github.com/repos/vitor115/portifolio';
+  const reposUrl = 'https://api.github.com/repos/vitor115/todolist';
   const reposUrl2 = 'https://api.github.com/repos/vitor115/busca-curso';
   async function getReposInfo() {
     try {
@@ -50,6 +50,31 @@ export function Main() {
 
   return (
     <main className="flex flex-col gap-[30px]">
+      <header>
+        <div className="flex items-center w-full rounded-2xl bg-cards shadow-black shadow-sm p-[30px]">
+          Portifólio de projetos
+        </div>
+      </header>
+      <div className="flex items-center w-full rounded-2xl bg-cards shadow-black shadow-sm min-h-[186px] gap-5 p-[30px]">
+        <ProfilePic />
+        <article className="w-full overflow-auto">
+          <h2 className=" font-bold mb-2"> Sobre Mim</h2>
+          <p>
+            Trabalho com Projetos como Desenvolvedor Front-end tendo experiência
+            em HTML, CSS, Javascript, ReactJS e Typescript. Sou um Dev
+            apaixonado por desenvolver novas soluções que melhoram a vida do
+            cliente, com experiência em Product Management e Quality Assurance,
+            sempre desenvolvo soluções que agregam na experiência do usuário e
+            na interface.
+          </p>
+          <ul className="flex gap-[10px] mt-2">
+            <li className="text-sm">#ReactJS</li>
+            <li className="text-sm">#HTML</li>
+            <li className="text-sm">#CSS</li>
+            <li className="text-sm">#Front-end</li>
+          </ul>
+        </article>
+      </div>
       <header className=" h-ful w-full rounded-2xl shadow-black shadow-sm bg-cards p-[30px] flex items-center">
         <h2 className="">My Projects</h2>
         <a href="#" className="ml-auto text-sm">
@@ -60,7 +85,9 @@ export function Main() {
         <div className="flex flex-col justify-center w-full h-ful rounded-2xl bg-cards shadow-black shadow-sm min-h-[186px] p-[30px] flex-wrap">
           <header className="flex gap-4 mb-5">
             <img src={folder} alt="" />
-            <h2> {reposName}</h2>
+            <a href="https://github.com/vitor115/busca-curso">
+              <h2> {reposName}</h2>
+            </a>
           </header>
           <p className="mb-12">{description}</p>
           <div className="flex">
@@ -78,7 +105,9 @@ export function Main() {
         <div className="flex flex-col justify-center w-full h-ful rounded-2xl bg-cards shadow-black shadow-sm min-h-[186px] p-[30px]">
           <header className="flex gap-4 mb-5">
             <img src={folder} alt="" />
-            <h2>{reposName2}</h2>
+            <a href="https://vitor115.github.io/todolist/">
+              <h2>{reposName2}</h2>
+            </a>
           </header>
           <p className="mb-12">{description2}</p>
           <div className="flex">
@@ -91,32 +120,6 @@ export function Main() {
           </div>
         </div>
       </section>
-      <header>
-        <div className="flex items-center w-full rounded-2xl bg-cards shadow-black shadow-sm p-[30px]">
-          Recent Posts
-        </div>
-      </header>
-      <div className="flex items-center w-full rounded-2xl bg-cards shadow-black shadow-sm min-h-[186px] gap-5 p-[30px]">
-        <ProfilePic />
-        <article className="w-full overflow-auto">
-          <h2 className=" font-bold"> Voltando a aprender</h2>
-          <p className="mb-7 text-sm">1 sem atrás</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-            voluptate consequatur obcaecati dolores, eligendi omnis harum earum
-            explicabo quo aliquid unde! Quos maiores consequatur fuga distinctio
-            eum, ipsa vel facilis.
-          </p>
-          <ul className="flex gap-[10px]">
-            <li className="text-sm">#Vida</li>
-            <li className="text-sm">#qualidade</li>
-            <li className="text-sm">#html</li>
-            <li className="text-sm">#react</li>
-          </ul>
-          {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7021142600409563136"  title="Publicação incorporada" className="w-full h-[400px] rounded" frameborder="0"></iframe>
-           */}
-        </article>
-      </div>
     </main>
   );
 }
